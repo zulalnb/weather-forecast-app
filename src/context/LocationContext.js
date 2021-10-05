@@ -4,7 +4,7 @@ import { data } from "../data";
 const LocationContext = createContext();
 
 export const LocationProvider = ({ children }) => {
-  const [loc, setLoc] = useState(data[40]);
+  const [loc, setLoc] = useState(data[39]);
 
   const values = { loc, setLoc };
 

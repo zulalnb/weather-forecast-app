@@ -1,2 +1,2 @@
 # weather-forecast-app
-Created with CodeSandbox
+İçinde bulunduğumuz günden başlayarak önümüzdeki bir haftalık süreci yansıtan hava durumu sitesi.

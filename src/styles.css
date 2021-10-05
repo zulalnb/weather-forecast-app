@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: grey;
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+  padding-bottom: 20px;
+}
+
+.weather {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  grid-gap: 16px;
+  margin: 16px;
+  font-size: 12px;
+  text-align: center;
+  color: rgba(131, 149, 167, 1);
+  font-weight: bold;
+}
+
+.dailyWeather0 {
+  background-color: rgba(183, 185, 184, 0.212);
+  text-align: center;
+  border: 1px solid rgba(209, 204, 192, 1);
+}
+
+.dailyWeather {
+  text-align: center;
+}
+
+select {
+  background-color: #fff;
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin: 15px;
+  padding: 5px;
+}
+
+.city {
+  background-color: rgba(72, 126, 176, 0.1);
+}
+
+.maxTemp {
+  color: #000;
+}
+
+@media screen and (max-width: 600px) {
+  .weather {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .weather {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 200px) {
+  .weather {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}

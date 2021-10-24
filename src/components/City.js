@@ -1,10 +1,8 @@
 import { React, useEffect } from "react";
-import { useCity } from "../context/CityContext";
 import useCurrentLocation from "./useCurrentLocation";
 
-function City({ loc, setLoc }) {
+function City({ loc, setLoc, city }) {
   const { location } = useCurrentLocation();
-  const { city } = useCity();
 
   //if location access permission is allowed, find nearest city to current location.
   useEffect(() => {

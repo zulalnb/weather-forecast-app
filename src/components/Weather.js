@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import axios from "axios";
 
 function useOpenWeather({ loc, apiKey }) {
   const lat = loc.lat;
@@ -8,13 +9,21 @@ function useOpenWeather({ loc, apiKey }) {
 
   const [apiData, setApiData] = useState(null);
 
+  // const data=await axios.get(apiUrl);
+  // setApiData(data);
+
   useEffect(() => {
-    fetch(apiUrl)
-      .then((res) => res.json())
-      .then((data) => {
-        setApiData(data);
-      });
-  }, [apiUrl]);
+    // fetch(apiUrl)
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     setApiData(data);
+    //   });
+    const getData = async () => {
+      const res = await axios(apiUrl);
+      setApiData(res.data);
+    };
+    getData();
+  }, []);
 
   return apiData;
 }

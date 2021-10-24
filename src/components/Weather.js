@@ -23,7 +23,7 @@ function useOpenWeather({ loc, apiKey }) {
       setApiData(res.data);
     };
     getData();
-  }, []);
+  }, [apiUrl]);
 
   return apiData;
 }

@@ -9,20 +9,8 @@ function useOpenWeather({ loc, apiKey }) {
 
   const [apiData, setApiData] = useState(null);
 
-  // const data=await axios.get(apiUrl);
-  // setApiData(data);
-
   useEffect(() => {
-    // fetch(apiUrl)
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     setApiData(data);
-    //   });
-    const getData = async () => {
-      const res = await axios(apiUrl);
-      setApiData(res.data);
-    };
-    getData();
+    axios(apiUrl).then((res) => setApiData(res.data));
   }, [apiUrl]);
 
   return apiData;

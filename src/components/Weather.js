@@ -28,7 +28,7 @@ function Weather({ loc }) {
           <div className={`dailyWeather${i}`}>
             <div className="day">{days[new Date(d.dt * 1000).getDay()]}</div>
             <img
-              src={`http://openweathermap.org/img/w/${d.weather[0].icon}.png`}
+              src={`https://openweathermap.org/img/w/${d.weather[0].icon}.png`}
               alt={d.weather[0].main}
             />
             <div>
